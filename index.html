@@ -6,18 +6,51 @@
     <title>PromptMaster - Impulsione seu Negócio com IA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        /* Estilos para a animação de fade do carrossel */
+        .carousel-item {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-item.active {
+            opacity: 1;
+            position: relative;
+        }
+        /* Sobreposição escura para garantir leitura do texto */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body class="bg-gray-50 font-sans leading-normal tracking-normal">
 
-    <header class="gradient-bg text-white py-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Prompts que Transformam Ideias em Lucro</h1>
-            <p class="text-xl mb-10 text-gray-300">Gere imagens de produtos, roteiros virais e estratégias de marketing em segundos com comandos validados para IA.</p>
-            <a href="#solucoes" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">Começar Agora</a>
+    <header class="relative overflow-hidden bg-gray-900 text-white min-h-[500px] flex items-center">
+        
+        <div id="carousel" class="absolute inset-0 z-0">
+            
+            <div class="carousel-item active bg-cover bg-center" style="background-image: url('img/banner1.jpg');">
+                <div class="w-full h-full bg-gray-700 flex items-center justify-center text-gray-500 italic">[Imagem Banner 1 - E-commerce]</div>
+            </div>
+            
+            <div class="carousel-item bg-cover bg-center" style="background-image: url('img/banner2.jpg');">
+                <div class="w-full h-full bg-gray-600 flex items-center justify-center text-gray-500 italic">[Imagem Banner 2 - Social Media]</div>
+            </div>
+            
+            <div class="carousel-item bg-cover bg-center" style="background-image: url('img/banner3.jpg');">
+                <div class="w-full h-full bg-gray-800 flex items-center justify-center text-gray-500 italic">[Imagem Banner 3 - Gastronomia]</div>
+            </div>
+        </div>
+
+        <div class="absolute inset-0 overlay z-10"></div>
+        
+        <div class="max-w-4xl mx-auto text-center px-6 relative z-20 py-20">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Prompts que Transformam Ideias em Lucro</h1>
+            <p class="text-xl mb-10 text-gray-200 max-w-2xl mx-auto">Gere imagens de produtos, roteiros virais e estratégias de marketing em segundos com comandos validados para IA.</p>
+            <a href="#solucoes" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg inline-block">Começar Agora</a>
         </div>
     </header>
 
@@ -59,6 +92,28 @@
             &copy; 2026 PromptMaster - Impulsionando Negócios com Inteligência Artificial.
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.carousel-item');
+            let currentItem = 0;
+            const intervalTime = 5000; // Tempo em milissegundos (5 segundos)
+
+            function nextItem() {
+                // Remove a classe ativa do item atual
+                items[currentItem].classList.remove('active');
+                
+                // Calcula o próximo item (volta ao início se for o último)
+                currentItem = (currentItem + 1) % items.length;
+                
+                // Adiciona a classe ativa ao novo item
+                items[currentItem].classList.add('active');
+            }
+
+            // Inicia o carrossel automático
+            setInterval(nextItem, intervalTime);
+        });
+    </script>
 
 </body>
 </html>

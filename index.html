@@ -9,7 +9,7 @@
         /* Estilos para a animação de fade do carrossel */
         .carousel-item {
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1.2s ease-in-out;
             position: absolute;
             top: 0;
             left: 0;
@@ -20,76 +20,99 @@
             opacity: 1;
             position: relative;
         }
-        /* Sobreposição escura para garantir leitura do texto */
+        /* Sobreposição escura para garantir leitura do texto sobre as imagens */
         .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.55);
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans leading-normal tracking-normal">
+<body class="bg-gray-50 font-sans leading-normal tracking-normal text-gray-900">
 
-    <header class="relative overflow-hidden bg-gray-900 text-white min-h-[500px] flex items-center">
+    <header class="relative overflow-hidden bg-gray-900 text-white min-h-[550px] flex items-center">
         
         <div id="carousel" class="absolute inset-0 z-0">
             
-            <div class="carousel-item active bg-cover bg-center" style="background-image: url('img/banner1.jpg');">
-                <div class="w-full h-full bg-gray-700 flex items-center justify-center text-gray-500 italic">[Imagem Banner 1 - E-commerce]</div>
+            <div class="carousel-item active bg-cover bg-center w-full h-full" 
+                 style="background-image: url('img/banner1.jpg');">
             </div>
             
-            <div class="carousel-item bg-cover bg-center" style="background-image: url('img/banner2.jpg');">
-                <div class="w-full h-full bg-gray-600 flex items-center justify-center text-gray-500 italic">[Imagem Banner 2 - Social Media]</div>
+            <div class="carousel-item bg-cover bg-center w-full h-full" 
+                 style="background-image: url('img/banner2.jpg');">
             </div>
-            
-            <div class="carousel-item bg-cover bg-center" style="background-image: url('img/banner3.jpg');">
-                <div class="w-full h-full bg-gray-800 flex items-center justify-center text-gray-500 italic">[Imagem Banner 3 - Gastronomia]</div>
-            </div>
+
         </div>
 
         <div class="absolute inset-0 overlay z-10"></div>
         
         <div class="max-w-4xl mx-auto text-center px-6 relative z-20 py-20">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Prompts que Transformam Ideias em Lucro</h1>
-            <p class="text-xl mb-10 text-gray-200 max-w-2xl mx-auto">Gere imagens de produtos, roteiros virais e estratégias de marketing em segundos com comandos validados para IA.</p>
-            <a href="#solucoes" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg inline-block">Começar Agora</a>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
+                Prompts que Transformam Ideias em Lucro
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto drop-shadow-md">
+                Gere imagens de produtos, roteiros virais e estratégias de marketing em segundos com comandos validados para IA.
+            </p>
+            <a href="#solucoes" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 transition duration-300 shadow-2xl inline-block transform hover:scale-105">
+                Começar Agora
+            </a>
         </div>
     </header>
 
     <section id="solucoes" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Tudo o que seu negócio precisa para escalar</h2>
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tudo o que seu negócio precisa para escalar</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Nossos pacotes de prompts são desenhados para empreendedores que buscam resultados profissionais sem gastar horas no design.</p>
+        </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="bg-white p-8 rounded-2xl shadow-xl border-b-8 border-blue-600 flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300">
-                <div class="text-5xl mb-6">📸</div>
+                <div class="text-6xl mb-6">📸</div>
                 <h3 class="font-bold text-2xl mb-4 text-gray-800">Imagens de Produto</h3>
-                <p class="text-gray-600 mb-8">Prompts otimizados para fotos realistas e publicitárias que aumentam a conversão do seu e-commerce.</p>
+                <p class="text-gray-600 mb-8 leading-relaxed">Prompts otimizados para fotos realistas e publicitárias que aumentam drasticamente a conversão do seu e-commerce.</p>
                 <a href="exemplos.html" class="mt-auto bg-blue-50 text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300 w-full border border-blue-600">
                     Ver Galeria de Exemplos
                 </a>
             </div>
 
             <div class="bg-white p-8 rounded-2xl shadow-xl border-b-8 border-purple-600 flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300">
-                <div class="text-5xl mb-6">🎬</div>
+                <div class="text-6xl mb-6">🎬</div>
                 <h3 class="font-bold text-2xl mb-4 text-gray-800">Roteiros e Posts</h3>
-                <p class="text-gray-600 mb-8">Scripts para TikTok, Reels e legendas para Instagram criadas para reter a atenção e gerar desejo de compra.</p>
-                <span class="text-purple-600 font-semibold py-2 px-4 bg-purple-50 rounded-lg">Incluído no Pacote</span>
+                <p class="text-gray-600 mb-8 leading-relaxed">Scripts para TikTok, Reels e legendas para Instagram criadas com gatilhos mentais para reter a atenção.</p>
+                <span class="text-purple-600 font-semibold py-2 px-4 bg-purple-50 rounded-lg border border-purple-200">Incluído no Pacote</span>
             </div>
 
             <div class="bg-white p-8 rounded-2xl shadow-xl border-b-8 border-green-600 flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300">
-                <div class="text-5xl mb-6">📧</div>
+                <div class="text-6xl mb-6">📧</div>
                 <h3 class="font-bold text-2xl mb-4 text-gray-800">E-mails de Venda</h3>
-                <p class="text-gray-600 mb-8">Sequências de e-mails persuasivos e anúncios que falam diretamente com a dor do seu cliente.</p>
-                <span class="text-green-600 font-semibold py-2 px-4 bg-green-50 rounded-lg">Alta Conversão</span>
+                <p class="text-gray-600 mb-8 leading-relaxed">Sequências de e-mails persuasivos e textos para anúncios que convertem leads em clientes recorrentes.</p>
+                <span class="text-green-600 font-semibold py-2 px-4 bg-green-50 rounded-lg border border-green-200">Alta Conversão</span>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12 px-6 text-center">
-        <p class="text-gray-400 mb-6">Dê o próximo passo na automação do seu marketing.</p>
-        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
-            Falar com um Especialista
+    <section class="bg-gray-100 py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Por que usar nossos Prompts?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="flex items-start">
+                    <div class="bg-blue-600 p-2 rounded-full text-white mr-4">✓</div>
+                    <p class="text-gray-700"><strong>Validação Profissional:</strong> Comandos testados em Midjourney, DALL-E e ChatGPT.</p>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-blue-600 p-2 rounded-full text-white mr-4">✓</div>
+                    <p class="text-gray-700"><strong>Economia de Tempo:</strong> Reduza em 90% o tempo de criação de conteúdo visual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16 px-6 text-center">
+        <p class="text-gray-400 mb-6 uppercase tracking-widest text-sm">Escalabilidade com Inteligência Artificial</p>
+        <h2 class="text-2xl font-bold mb-8">Pronto para revolucionar seu marketing?</h2>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-lg transition duration-300 shadow-lg">
+            Quero Acesso aos Prompts
         </button>
-        <div class="mt-10 pt-8 border-t border-gray-800 text-sm">
-            &copy; 2026 PromptMaster - Impulsionando Negócios com Inteligência Artificial.
+        <div class="mt-16 pt-8 border-t border-gray-800 text-sm text-gray-500">
+            &copy; 2026 PromptMaster - Desenvolvido para Impulsionar Negócios.
         </div>
     </footer>
 
@@ -97,21 +120,16 @@
         document.addEventListener('DOMContentLoaded', function() {
             const items = document.querySelectorAll('.carousel-item');
             let currentItem = 0;
-            const intervalTime = 5000; // Tempo em milissegundos (5 segundos)
+            const intervalTime = 5000; // Troca a imagem a cada 5 segundos
 
-            function nextItem() {
-                // Remove a classe ativa do item atual
-                items[currentItem].classList.remove('active');
-                
-                // Calcula o próximo item (volta ao início se for o último)
-                currentItem = (currentItem + 1) % items.length;
-                
-                // Adiciona a classe ativa ao novo item
-                items[currentItem].classList.add('active');
+            if(items.length > 0) {
+                function nextItem() {
+                    items[currentItem].classList.remove('active');
+                    currentItem = (currentItem + 1) % items.length;
+                    items[currentItem].classList.add('active');
+                }
+                setInterval(nextItem, intervalTime);
             }
-
-            // Inicia o carrossel automático
-            setInterval(nextItem, intervalTime);
         });
     </script>
 
